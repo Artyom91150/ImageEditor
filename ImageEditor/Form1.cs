@@ -14,6 +14,8 @@ namespace ImageEditor
     {
         Bitmap image;
         PreviousSteps PrevSteps;
+        public float[,] StructElementMatrix;
+
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +24,14 @@ namespace ImageEditor
         private void Form1_Load(object sender, EventArgs e)
         {
             PrevSteps = new PreviousSteps();
+            StructElementMatrix = new float[5, 5];
+            for(int i = 0; i < 5; i++)
+            {
+                for(int j = 0; j < 5; j++)
+                {
+                    StructElementMatrix[i, j] = 1;
+                }
+            }
         }
 
         private void PictureBoxRefresh()
@@ -241,9 +251,10 @@ namespace ImageEditor
         {
             if(PrevSteps.Images[0] != null)
             {
-                Bitmap pic = image;
+                //Bitmap pic = image;
                 pictureBox1.Image = PrevSteps.Images[0];
-                PrevSteps.AddImage(pic);
+                image = PrevSteps.Images[0];
+                //PrevSteps.AddImage(pic);
                 PictureBoxRefresh();
             }
         }
@@ -252,9 +263,10 @@ namespace ImageEditor
         {
             if (PrevSteps.Images[1] != null)
             {
-                Bitmap pic = image;
+                //Bitmap pic = image;
                 pictureBox1.Image = PrevSteps.Images[1];
-                PrevSteps.AddImage(pic);
+                image = PrevSteps.Images[1];
+                //PrevSteps.AddImage(pic);
                 PictureBoxRefresh();
             }
         }
@@ -263,9 +275,10 @@ namespace ImageEditor
         {
             if (PrevSteps.Images[2] != null)
             {
-                Bitmap pic = image;
+                //Bitmap pic = image;
                 pictureBox1.Image = PrevSteps.Images[2];
-                PrevSteps.AddImage(pic);
+                image = PrevSteps.Images[2];
+                //PrevSteps.AddImage(pic);
                 PictureBoxRefresh();
             }
         }
@@ -290,25 +303,25 @@ namespace ImageEditor
 
         private void расширениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filter filter = new Dilation();
+            Filter filter = new Dilation(StructElementMatrix);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void сужениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filter filter = new Erosion();
+            Filter filter = new Erosion(StructElementMatrix);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void размыканиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filter filter = new Opening();
+            Filter filter = new Opening(StructElementMatrix);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
         private void замыканиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filter filter = new Closing();
+            Filter filter = new Closing(StructElementMatrix);
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
@@ -322,6 +335,12 @@ namespace ImageEditor
         {
             Filter filter = new MedianFilter();
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(StructElementMatrix, this);
+            form2.Show();
         }
     }
 }

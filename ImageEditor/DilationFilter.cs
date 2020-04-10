@@ -191,4 +191,6 @@ namespace ImageEditor
                                   Clamp(FirstColor.B - SecondColor.B, 0, 255));
         }
     }
+
+
 }

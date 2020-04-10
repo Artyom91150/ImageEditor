@@ -7,3 +7,14 @@ C:\Users\Артем\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.P
 C:\Users\Артем\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.csproj.GenerateResource.cache
 C:\Users\Артем\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.exe
 C:\Users\Артем\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.pdb
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\bin\Debug\ImageEditor.exe.config
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\bin\Debug\ImageEditor.exe
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\bin\Debug\ImageEditor.pdb
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.csprojAssemblyReference.cache
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.Form1.resources
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.Properties.Resources.resources
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.csproj.GenerateResource.cache
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.csproj.CoreCompileInputs.cache
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.exe
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.pdb
+C:\Users\artyo\source\repos\ImageEditor\ImageEditor\obj\Debug\ImageEditor.Form2.resources
